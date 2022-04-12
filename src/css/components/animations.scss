@@ -1,0 +1,29 @@
+@keyframes visible-menu {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 100vh;
+  }
+}
+
+@keyframes visible-line-link {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 70px;
+  }
+}
+
+@keyframes show-card {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}

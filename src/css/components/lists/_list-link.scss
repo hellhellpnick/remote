@@ -1,0 +1,14 @@
+.list-link {
+  max-width: 240px;
+  width: 100%;
+  @include flex-constructor(space-between, center, row);
+  margin-bottom: 40px;
+}
+
+.list-link__item-link {
+  cursor: pointer;
+}
+
+.list-link__item-img {
+  @include svg-constructor(32px, 27px, $icon-light-color);
+}

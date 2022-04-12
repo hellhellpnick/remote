@@ -1,0 +1,25 @@
+.section-footer {
+  @extend %section;
+  min-height: auto;
+  padding: 45px;
+  background-color: $background-second-color;
+}
+
+.section-footer__logo {
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.section-footer__text {
+  padding-left: 20px;
+  @include text-constructor($font-size-smallMedium, $font-weigth-main, $text-light-color);
+  line-height: 22px;
+  margin-bottom: 22px;
+
+}
+
+.section-footer__text--last {
+  margin-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+}

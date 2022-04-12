@@ -1,0 +1,31 @@
+.card-slider {
+  @include flex-constructor(flex-start, center, column);
+  display: flex !important;
+  padding: 27px 26px 27px 36px;
+  border: 1px solid $border-main-color;
+  border-radius: $box-radius-main;
+  min-height: 615px;
+}
+
+.card-slider__img {
+  margin: 0 auto;
+  max-width: 227px;
+  max-height: 250px;
+  height: 100%;
+  width: 100%;
+  @include image-padding-hack(1%, cover);
+}
+
+.card-slider__title {
+  @include text-constructor($font-size-medium, $font-weigth-bold, $text-dark-color);
+  text-transform: uppercase;
+  align-self: flex-start;
+  line-height: 27px;
+}
+
+.card-slider__text {
+  @include text-constructor($font-size-medium, $font-weigth-main, $text-dark-color);
+  align-self: flex-start;
+  line-height: 175%;
+  margin-bottom: 56px;
+}

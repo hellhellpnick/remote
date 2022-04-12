@@ -1,0 +1,56 @@
+.section-stage {
+  @extend %section;
+  position: relative;
+  padding: 45px 20px;
+  background-color: $background-light-color;
+}
+
+.section-stage__info {
+  position: absolute;
+  top: 18px;
+  left: -17px;
+}
+
+.section-stage__box {
+  @include flex-constructor(flex-start, stretch, row);
+  margin-bottom: 25px;
+
+  .slick-track {
+    @include flex-constructor(flex-start, stretch, row);
+    height: 100%;
+  }
+}
+
+.section-stage__buttons {
+  @include flex-constructor(space-between, center, row);
+  max-width: 207px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.section-stage__btn {
+  @include flex-constructor(center, center, row);
+  @extend %button;
+  width: 60px;
+  height: 60px;
+  padding: 18px 20px;
+  border: 1px solid $border-main-color;
+  border-radius: $box-radius-main;
+
+  &>svg {
+    @include svg-constructor(24px, 12px);
+    position: relative;
+  }
+}
+
+.section-stage__btn--left {
+  &>svg {
+    transform: rotate(90deg);
+  }
+}
+
+.section-stage__btn--right {
+  &>svg {
+    transform: rotate(-90deg);
+  }
+}

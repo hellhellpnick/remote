@@ -1,0 +1,9 @@
+.section-example {
+  @extend %section;
+  padding-bottom: 30px;
+  background-color: $background-main-color;
+}
+
+.section-example__content {
+  margin-bottom: 30px;
+}

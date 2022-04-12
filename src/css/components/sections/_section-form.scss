@@ -1,0 +1,74 @@
+.section-form {
+  @extend %section;
+  padding: 45px 20px 25px;
+  background-color: $background-main-color;
+}
+
+.section-form__form {
+  margin-bottom: 42px;
+}
+
+.section-form__img {
+  max-width: 300px;
+  max-height: 300px;
+  @include image-padding-hack(1%, cover);
+  margin: 0 auto;
+}
+
+.section-form__text {
+  margin-bottom: 25px;
+}
+
+.section-form__wrapper {
+  position: relative;
+  @include flex-constructor(flex-start, flex-start, column);
+  padding: 19px 17px;
+  background-color: $background-light-color;
+  border: 1px solid $border-main-color;
+  border-radius: $box-radius-main;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    margin-bottom: 15px
+  }
+}
+
+.section-form__wrapper--success {
+  border-color: green;
+}
+
+.section-form__wrapper--error {
+  border-color: red;
+  margin-bottom: 45px;
+
+  .section-form__wrapper-label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.section-form__wrapper-input {
+  @include text-constructor($font-size-ultraSmall, $font-weigth-main, $text-dark-color);
+  line-height: 20px;
+  outline: none;
+  border: none;
+  width: 100%;
+
+  &::placeholder {
+    @include text-constructor($font-size-ultraSmall, $font-weigth-main, #939393);
+  }
+}
+
+.section-form__wrapper-label {
+  display: none;
+  @include text-constructor($font-size-ultraSmall, $font-weigth-main, $text-dark-color);
+  position: absolute;
+  bottom: -30px;
+  left: 0;
+
+  &>img {
+    width: 20px;
+    margin-right: 5px;
+  }
+}

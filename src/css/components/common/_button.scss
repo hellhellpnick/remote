@@ -1,0 +1,10 @@
+.button {
+  @extend %button;
+  padding: 17px;
+  @include text-constructor($font-size-small, $font-weigth-primary, $text-light-color);
+  text-transform: uppercase;
+  line-height: 175%;
+  background-color: $button-main-color;
+  border-radius: $box-radius-main;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+.section-info {
+  position: relative;
+  @extend %section;
+  padding-top: 45px;
+  padding-bottom: 50px;
+
+}
+
+.section-info__circle {
+  position: absolute;
+  right: 33px;
+  top: -12px;
+}
+
+.section-info__img {
+  max-width: 689px;
+  max-height: 483px;
+  @include image-padding-hack(1%, cover);
+  margin: 0 auto;
+  margin-bottom: 30px;
+}

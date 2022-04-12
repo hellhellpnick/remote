@@ -1,0 +1,13 @@
+.section-service {
+  @extend %section;
+  min-height: auto;
+  padding: 16px 20px 30px;
+  background-color: $background-main-color;
+}
+
+.section-service__title {
+  @include text-constructor($font-size-big, $font-weigth-bold, $text-primary-color);
+  margin-bottom: 17px;
+  text-align: center;
+  line-height: 150%;
+}

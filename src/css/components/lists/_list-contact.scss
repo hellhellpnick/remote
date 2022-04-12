@@ -1,0 +1,28 @@
+.list-contact {
+  @include flex-constructor(flex-start, center, column);
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+.list-contact__item {
+  @include flex-constructor(flex-start, center, row);
+  flex-grow: 3;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.list-contact__item-img {
+  @include svg-constructor(28px, 29px, $icon-light-color);
+  margin-right: 25px;
+}
+
+.list-contact__item-text {
+  @include text-constructor($font-size-smallMedium, $font-weigth-main, $text-light-color);
+  line-height: 140%;
+  min-width: 80px;
+
+}

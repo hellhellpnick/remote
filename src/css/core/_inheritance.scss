@@ -1,0 +1,22 @@
+%container {
+  margin: 0 auto;
+  max-width: $max-width-container;
+  width: 100%;
+}
+
+%button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+%section {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  padding: 20px;
+}

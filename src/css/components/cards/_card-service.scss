@@ -1,0 +1,81 @@
+.card-service {
+  @extend %button;
+  @include flex-constructor(flex-start, flex-start, column);
+  padding: 14px 24px;
+  background-color: $background-light-color;
+  border-radius: $box-radius-main;
+  margin-bottom: 10px;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-service__title {
+  position: relative;
+  text-align: left;
+  @include text-constructor($font-size-medium, $font-weigth-main, $text-primary-color);
+  @include flex-constructor(flex-start, center, row);
+  line-height: 175%;
+  width: 100%;
+  padding: 0 32px;
+  transition: all 0.2s ease;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    left: 0;
+    @include box-size(15px, 15px);
+    border-radius: $box-radius-half;
+    background-color: $icon-main-color;
+  }
+}
+
+.card-service__svg {
+  position: absolute;
+  right: 0;
+  @include svg-constructor(24px, 14px, $icon-dark-color);
+  transition: all 0.2s ease;
+}
+
+.card-service__text {
+  display: none;
+
+}
+
+.card-service--active {
+  padding-bottom: 43px;
+
+  .card-service__svg {
+    transform: rotate(180deg);
+  }
+
+  .card-service__title {
+    margin-bottom: 19px;
+
+    &::before {
+      background-color: $icon-primary-color;
+    }
+  }
+
+  .card-service__text {
+    display: flex;
+    position: relative;
+    @include text-constructor($font-size-medium, $font-weigth-main, $text-dark-color);
+    line-height: 175%;
+    text-align: left;
+    padding-left: 32px;
+
+    &::before {
+      position: absolute;
+      content: '';
+      display: block;
+      left: 7px;
+      width: 1px;
+      height: 100%;
+      background-color: $icon-dark-color;
+    }
+  }
+}

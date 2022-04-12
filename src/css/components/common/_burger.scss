@@ -1,0 +1,25 @@
+.burger {
+  @extend %button;
+  @include flex-constructor(space-around, center, row);
+  padding: 2px;
+  width: 50px;
+  height: 13px;
+  background-color: transparent;
+  z-index: 10;
+
+  @include media-desktop {
+    display: none;
+  }
+}
+
+.burger__item {
+  @include box-size(13px, 13px);
+  background-color: $background-light-color;
+  border-radius: $box-radius-half;
+  margin-right: 5px;
+  transition: all 0.2s ease;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

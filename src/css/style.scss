@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,800;1,400;1,600&display=swap');
+
+// Core
+@import './core/vars';
+@import './core/mixins';
+@import './core/inheritance';
+@import './core/common';
+
+// Components Animations
+@import './components/animations.scss';
+
+// Components Sections
+@import './components/sections/sections-header';
+@import './components/sections/section-service';
+@import './components/sections/section-stage';
+@import './components/sections/section-example';
+@import './components/sections/section-info';
+@import './components/sections/section-form';
+@import './components/sections/section-footer';
+
+// Components Common
+@import './components/common/burger';
+@import './components/common/button';
+@import './components/common/main-nav';
+@import './components/common/modal-window';
+
+// Components Cards
+@import './components/cards/card-service';
+@import './components/cards/card-slider';
+@import './components/cards/card-content';
+
+// Components Lists
+@import './components/lists/list-contact';
+@import './components/lists/list-link';
