@@ -1,5 +1,5 @@
 .card-content {
-  max-width: 567;
+  max-width: 567px;
   max-height: 447px;
   @include image-padding-hack(1%, cover);
   border-radius: $box-radius-primary;
@@ -41,4 +41,9 @@
 .card-content__subtitle {
   @include text-constructor($font-size-medium, $font-weigth-main, $text-light-color);
   line-height: 30px;
+}
+
+.slick-initialized .slick-slide{  
+  @include flex-constructor(center, center, column);
+  display: flex  !important;
 }

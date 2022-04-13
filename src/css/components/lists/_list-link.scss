@@ -1,10 +1,17 @@
 .list-link {
-  max-width: 240px;
   width: 100%;
-  @include flex-constructor(space-between, center, row);
+  @include flex-constructor(center, center, row);
   margin-bottom: 40px;
 }
 
+.list-link__item{
+
+  margin-right:25px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
 .list-link__item-link {
   cursor: pointer;
 }

@@ -4,7 +4,23 @@
   @include text-constructor($font-size-small, $font-weigth-primary, $text-light-color);
   text-transform: uppercase;
   line-height: 175%;
+  border: 1px solid transparent;
   background-color: $button-main-color;
   border-radius: $box-radius-main;
   width: 100%;
+  transition: all 0.2s ease;
+
+  @include media-desktop{
+    width: auto;
+    min-width: 270px;
+
+    &:hover{
+      border-color: $border-main-color;
+    }
+
+    &:active{
+      background-color: $background-second-color;
+      color: $text-light-color;
+    }
+  }
 }

@@ -1,11 +1,11 @@
 .list-contact {
-  @include flex-constructor(flex-start, center, column);
+  @include flex-constructor(center, center, column);
   width: 100%;
   margin-bottom: 60px;
 }
 
 .list-contact__item {
-  @include flex-constructor(flex-start, center, row);
+  @include flex-constructor(center, center, row);
   flex-grow: 3;
   width: 100%;
   margin-bottom: 10px;

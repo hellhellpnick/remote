@@ -45,6 +45,13 @@
   fill: $fill;
 }
 
+
+@mixin media-iphone-plus {
+  @media (min-width: $screen-iphone-plus) {
+    @content;
+  }
+}
+
 @mixin media-tablet {
   @media (min-width: $screen-tablet) {
     @content;

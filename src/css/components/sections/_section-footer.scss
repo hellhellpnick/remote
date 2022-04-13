@@ -16,7 +16,12 @@
   line-height: 22px;
   margin-bottom: 22px;
 
+  @include media-iphone-plus{
+    
+  text-align: center;
+  }
 }
+
 
 .section-footer__text--last {
   margin-bottom: 0;

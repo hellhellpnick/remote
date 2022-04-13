@@ -6,14 +6,45 @@
   background-size: 100%;
   background-position: center 80px;
   background-repeat: no-repeat;
+
+  @include media-desktop{
+    background-size: 776px, 613px;
+    padding: 80px 20px;
+    justify-content: center;
+    align-items: flex-start;
+    background-position-x: 80%;
+    background-position-y: 170px;
+    background-image: url('../images/bg/header-desktop.png');
+  }
+}
+.section-header__content-img{
+  display: none;
+
+  @include media-desktop{
+    display: block;
+    position: absolute;
+  }
+}
+
+.section-header__content-img--blue{
+@include box-size(52px, 52px);
+  left: -133px;
+  top: -35px;
 }
 
 .section-header__nav {
-  position: absolute;
+  position: fixed;
+  max-height: 50px;
+  height: 100%;
+  background-color: $background-primary-color;
   top: 0;
   left: 0;
   right: 0;
   width: 100%;
+
+  @include media-desktop{
+    max-height: 95px;
+  }
 }
 
 .section-header__nav-wrapper {
@@ -25,7 +56,11 @@
   max-height: 50px;
   padding: 10px;
   z-index: 11;
-  background-color: $background-second-color;
+
+  @include media-desktop{
+    max-height: 93px;
+    height: 100%;
+  }
 }
 
 .section-header__nav-box {
@@ -35,6 +70,10 @@
 .section-header__nav-image {
   max-width: 136px;
   width: 100%;
+
+  @include media-desktop{
+    max-width: 242px;
+  }
 }
 
 .section-header__slider {
@@ -46,18 +85,36 @@
 }
 
 .section-header__content {
+  position: relative;
   @include flex-constructor(flex-start, flex-start, column);
+  max-width: 838px;
+
 }
 
 .section-header__content-title {
   @include text-constructor($font-size-ultraBig, $font-weigth-bold, $text-dark-color);
   line-height: 120%;
   margin-bottom: 22px;
-  text-transform: uppercase
+  text-transform: uppercase;
+
+  @include media-desktop{
+    color: $text-main-color;
+    width: 100%;
+    max-width: 800px;
+line-height: 62px;
+    margin-bottom: 20px;
+    font-size: $font-size-ultraLarge;
+    text-transform: none;
+  }
 }
 
 .section-header__content-text {
   @include text-constructor($font-size-smallMedium, $font-weigth-main, $text-dark-color);
   line-height: 140%;
   margin-bottom: 34px;
+
+  @include media-desktop{
+    max-width: 432px;
+    margin-bottom: 58px;
+  }
 }
