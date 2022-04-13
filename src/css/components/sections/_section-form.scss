@@ -2,10 +2,22 @@
   @extend %section;
   padding: 45px 20px 25px;
   background-color: $background-main-color;
+  min-height: auto;
+
+  @include media-desktop {
+    position: relative;
+    padding: 180px 20px 120px 20px;
+  }
 }
 
 .section-form__form {
   margin-bottom: 42px;
+  width: 100%;
+
+  @include media-desktop {
+    width: 100%;
+    @include flex-constructor(center, center, column);
+  }
 }
 
 .section-form__img {
@@ -13,25 +25,44 @@
   max-height: 300px;
   @include image-padding-hack(1%, cover);
   margin: 0 auto;
+
+  @include media-desktop {
+    display: none;
+  }
 }
 
 .section-form__text {
   margin-bottom: 25px;
 }
 
+.section-form__container {
+  max-width: 470px;
+  @include flex-constructor(center, center, column);
+  margin: 0 auto;
+  width: 100%;
+  z-index: 2;
+}
+
 .section-form__wrapper {
+  width: 100%;
   position: relative;
   @include flex-constructor(flex-start, flex-start, column);
   padding: 19px 17px;
   background-color: $background-light-color;
-  border: 1px solid $border-main-color;
+  border: 1px solid $border-primary-color;
   border-radius: $box-radius-main;
   margin-bottom: 10px;
   transition: all 0.2s ease;
+  opacity: 0.8;
 
   &:last-child {
     margin-bottom: 15px
   }
+
+}
+
+.section-form__wrapper--focus {
+  opacity: 1;
 }
 
 .section-form__wrapper--success {
@@ -70,5 +101,44 @@
   &>img {
     width: 20px;
     margin-right: 5px;
+  }
+}
+
+.section-header__content-img--phone {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    max-width: 270px;
+    max-height: 270px;
+    bottom: 20%;
+    left: 15%;
+  }
+}
+
+.section-header__content-img--line-form {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    max-width: 170px;
+    max-height: 52px;
+    top: 35%;
+    right: 15%;
+  }
+}
+
+.section-header__content-img--circle-form {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    top: 45%;
+    right: 15%;
+
+    &>img {
+      width: 66px;
+      height: 66px;
+    }
   }
 }

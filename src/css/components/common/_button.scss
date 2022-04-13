@@ -10,17 +10,36 @@
   width: 100%;
   transition: all 0.2s ease;
 
-  @include media-desktop{
+  @include media-desktop {
     width: auto;
     min-width: 270px;
 
-    &:hover{
+    &:hover {
       border-color: $border-main-color;
     }
 
-    &:active{
+    &:active {
       background-color: $background-second-color;
       color: $text-light-color;
+    }
+  }
+}
+
+.button--disabled {
+  cursor: none;
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.button--nav {
+  padding: 10px 38px;
+  min-width: 170px;
+  max-height: 38px;
+  line-height: 15px;
+
+  @include media-desktop {
+    &:active {
+      border-color: $icon-light-color;
     }
   }
 }

@@ -9,6 +9,10 @@
   @extend %container;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 body,
 a,
 button,

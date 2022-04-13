@@ -1,8 +1,13 @@
 .section-service {
+  position: relative;
   @extend %section;
   min-height: auto;
   padding: 16px 20px 30px;
   background-color: $background-main-color;
+
+  @include media-desktop {
+    padding: 120px 20px;
+  }
 }
 
 .section-service__title {
@@ -10,4 +15,37 @@
   margin-bottom: 17px;
   text-align: center;
   line-height: 150%;
+
+  @include media-desktop {
+    font-size: $font-size-large;
+  }
+}
+
+.section-service__title--stage {
+  @include media-desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.section-service__content {
+  z-index: 2;
+}
+
+
+.section-service__content-img--buck {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    @include box-size(133px, 148px);
+    right: 145px;
+    bottom: 90px;
+    z-index: 1;
+  }
+}
+
+.section-service__title--service {
+  @include media-desktop {
+    margin-bottom: 50px;
+  }
 }

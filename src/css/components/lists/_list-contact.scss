@@ -2,6 +2,11 @@
   @include flex-constructor(center, center, column);
   width: 100%;
   margin-bottom: 60px;
+
+  @include media-desktop {
+    margin-bottom: 0;
+    margin-top: 25px;
+  }
 }
 
 .list-contact__item {

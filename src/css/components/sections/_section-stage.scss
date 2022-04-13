@@ -2,7 +2,24 @@
   @extend %section;
   position: relative;
   padding: 45px 20px;
+  min-height: auto;
   background-color: $background-light-color;
+
+  @include media-desktop {
+    padding: 125px 20px;
+  }
+}
+
+.section-stage__content-img--line {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    @include box-size(190px, 70px);
+    right: 186px;
+    bottom: 47px;
+    z-index: 1;
+  }
 }
 
 .section-stage__info {
@@ -10,6 +27,17 @@
   top: 18px;
   left: -17px;
 }
+
+.section-stage__content-img--circle {
+  @include media-desktop {
+
+    @include box-size(67px, 67px);
+    left: 186px;
+    top: 129px;
+    z-index: 1;
+  }
+}
+
 
 .section-stage__box {
   @include flex-constructor(flex-start, stretch, row);
@@ -19,6 +47,14 @@
     @include flex-constructor(flex-start, stretch, row);
     height: 100%;
   }
+
+  @include media-desktop {
+    margin: 0 auto;
+    max-width: 1370px;
+    width: 100%;
+
+    margin-bottom: 85px;
+  }
 }
 
 .section-stage__buttons {
@@ -26,6 +62,10 @@
   max-width: 207px;
   width: 100%;
   margin: 0 auto;
+
+  @include media-desktop {
+    width: auto;
+  }
 }
 
 .section-stage__btn {
@@ -36,16 +76,31 @@
   padding: 18px 20px;
   border: 1px solid $border-main-color;
   border-radius: $box-radius-main;
+  transition: all 0.2s ease;
 
   &>svg {
     @include svg-constructor(24px, 12px);
     position: relative;
+  }
+
+  @include media-desktop {
+    &:hover {
+      background-color: $background-primary-color;
+
+      &>svg {
+        fill: $icon-light-color;
+      }
+    }
   }
 }
 
 .section-stage__btn--left {
   &>svg {
     transform: rotate(90deg);
+  }
+
+  @include media-desktop {
+    margin-right: 30px;
   }
 }
 

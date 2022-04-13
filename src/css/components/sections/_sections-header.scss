@@ -7,29 +7,64 @@
   background-position: center 80px;
   background-repeat: no-repeat;
 
-  @include media-desktop{
+  @include media-tablet {
     background-size: 776px, 613px;
     padding: 80px 20px;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-start;
     background-position-x: 80%;
     background-position-y: 170px;
     background-image: url('../images/bg/header-desktop.png');
   }
+
+  @include media-desktop {
+    justify-content: center;
+  }
 }
-.section-header__content-img{
+
+.section-header__box--hidden {
+  min-height: 350px;
+  height: 100%;
+
+  @include media-tablet {
+    display: none;
+  }
+}
+
+.section-header__content-img {
   display: none;
 
-  @include media-desktop{
+  @include media-tablet {
     display: block;
     position: absolute;
   }
 }
 
-.section-header__content-img--blue{
-@include box-size(52px, 52px);
+.section-header__content-img--blue {
+  @include box-size(52px, 52px);
   left: -133px;
   top: -35px;
+}
+
+.section-header__content-img--bigCircle {
+  @include box-size(609px, 548px);
+  right: 0;
+  top: 172px;
+  z-index: -1;
+}
+
+.section-header__content-img--leftCircle {
+  @include box-size(149px, 193px);
+  left: 0;
+  bottom: 40px;
+  z-index: -2;
+}
+
+.section-header__content-img--leftLine {
+  @include box-size(171px, 63px);
+  left: 65px;
+  bottom: 95px;
+  z-index: -1;
 }
 
 .section-header__nav {
@@ -41,8 +76,9 @@
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 11;
 
-  @include media-desktop{
+  @include media-tablet {
     max-height: 95px;
   }
 }
@@ -57,7 +93,11 @@
   padding: 10px;
   z-index: 11;
 
-  @include media-desktop{
+  @include media-tablet {
+
+    max-width: 1250px;
+    width: 100%;
+    margin: 0 auto;
     max-height: 93px;
     height: 100%;
   }
@@ -71,7 +111,7 @@
   max-width: 136px;
   width: 100%;
 
-  @include media-desktop{
+  @include media-tablet {
     max-width: 242px;
   }
 }
@@ -97,11 +137,11 @@
   margin-bottom: 22px;
   text-transform: uppercase;
 
-  @include media-desktop{
+  @include media-tablet {
     color: $text-main-color;
     width: 100%;
     max-width: 800px;
-line-height: 62px;
+    line-height: 62px;
     margin-bottom: 20px;
     font-size: $font-size-ultraLarge;
     text-transform: none;
@@ -113,7 +153,7 @@ line-height: 62px;
   line-height: 140%;
   margin-bottom: 34px;
 
-  @include media-desktop{
+  @include media-tablet {
     max-width: 432px;
     margin-bottom: 58px;
   }

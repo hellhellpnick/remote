@@ -6,6 +6,7 @@
   border-radius: $box-radius-main;
   margin-bottom: 10px;
   transition: all 0.2s ease;
+  width: 100%;
 
   &:last-child {
     margin-bottom: 0;
@@ -54,6 +55,7 @@
 
   .card-service__title {
     margin-bottom: 19px;
+    font-weight: $font-weigth-bold;
 
     &::before {
       background-color: $icon-primary-color;
@@ -67,6 +69,10 @@
     line-height: 175%;
     text-align: left;
     padding-left: 32px;
+
+    @include media-desktop {
+      font-size: $font-size-ultraMedium;
+    }
 
     &::before {
       position: absolute;

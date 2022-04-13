@@ -25,6 +25,21 @@ const checkCondition = (item, condition) => {
 };
 
 const listenerInputs = () => {
+  inputs.forEach((item) => {
+    const input = item.querySelector(
+      ".section-form__wrapper-input",
+    );
+    input.addEventListener("focus", () =>
+      item.classList.add(
+        "section-form__wrapper--focus",
+      ),
+    );
+    input.addEventListener("blur", () =>
+      item.classList.remove(
+        "section-form__wrapper--focus",
+      ),
+    );
+  });
   inputs.forEach((item, index) => {
     const regEmail = new RegExp(
       "[a-zA-Z0-9]+@[a-zA-Z0-9]+.[a-zA-Z0-9]+",
@@ -32,16 +47,30 @@ const listenerInputs = () => {
     const input = item.querySelector(
       ".section-form__wrapper-input",
     );
+
     input.addEventListener("input", (e) => {
       const value = e.target.value;
+      const arr = [];
 
-      /* if (succName && succPhone && succEmail) {
+      inputs.forEach((item) => {
+        if (
+          item.classList.contains(
+            "section-form__wrapper--success",
+          )
+        ) {
+          arr.push(true);
+        } else {
+          arr.push(false);
+        }
+      });
+
+      if (arr.every((elem) => elem === true)) {
         btnForm.classList.remove(
           "button--disabled",
         );
       } else {
         btnForm.classList.add("button--disabled");
-      } */
+      }
 
       if (index === 0) {
         checkCondition(item, value.length >= 3);
@@ -87,7 +116,6 @@ const submitForm = () => {
     });
 
     if (arr.every((elem) => elem === true)) {
-      console.log("ok");
       modalWindow.classList.add(
         "modal-window--active",
       );

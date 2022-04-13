@@ -1,24 +1,41 @@
 const sliders = () => {
-  $(document).ready(function () {
-    $(".section-stage__box").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $(".section-stage__btn--left"),
-      nextArrow: $(".section-stage__btn--right"),
-      dots: false,
-    });
+  $(".section-stage__box").slick({
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    prevArrow: $(".section-stage__btn--left"),
+    nextArrow: $(".section-stage__btn--right"),
+    centerMargin: "100px",
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
   });
 
-  $(document).ready(function () {
-    $(".section-example__content").slick({
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      prevArrow: $(".section-example__btn--left"),
-      nextArrow: $(
-        ".section-example__btn--right",
-      ),
-      dots: false,
-    });
+  $(".section-example__content").slick({
+    slidesToShow: 2,
+    arrows: false,
+    dots: false,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          arrows: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          prevArrow: $(
+            ".section-example__btn--left",
+          ),
+          nextArrow: $(
+            ".section-example__btn--right",
+          ),
+        },
+      },
+    ],
   });
 };
 

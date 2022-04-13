@@ -22,7 +22,7 @@
   z-index: 10;
 
   &>.main-nav__item-link {
-    color: $text-dark-color;
+    color: $icon-main-color;
   }
 }
 
@@ -36,8 +36,18 @@
   }
 }
 
+.main-nav__item--desktop {
+  display: none;
+
+  @include media-desktop {
+    display: block;
+    margin-left: 30px;
+  }
+}
+
 .main-nav__item--active {
   .main-nav__item-link {
+
     &::after {
       display: inline-block;
       content: "";
@@ -72,10 +82,15 @@
 
   @include media-desktop {
     width: auto;
+    font-size: $font-size-smallMedium;
     color: $text-light-color;
 
     &:hover {
-      color: $text-primary-color;
+      color: $icon-main-color;
+
+      &::after {
+        background-color: $icon-main-color;
+      }
     }
 
     &:active {

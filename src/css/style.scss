@@ -9,15 +9,6 @@
 // Components Animations
 @import './components/animations.scss';
 
-// Components Sections
-@import './components/sections/sections-header';
-@import './components/sections/section-service';
-@import './components/sections/section-stage';
-@import './components/sections/section-example';
-@import './components/sections/section-info';
-@import './components/sections/section-form';
-@import './components/sections/section-footer';
-
 // Components Common
 @import './components/common/burger';
 @import './components/common/button';
@@ -32,3 +23,12 @@
 // Components Lists
 @import './components/lists/list-contact';
 @import './components/lists/list-link';
+
+// Components Sections
+@import './components/sections/sections-header';
+@import './components/sections/section-service';
+@import './components/sections/section-stage';
+@import './components/sections/section-example';
+@import './components/sections/section-form';
+@import './components/sections/section-info';
+@import './components/sections/section-footer';
