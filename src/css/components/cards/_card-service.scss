@@ -11,6 +11,10 @@
   &:last-child {
     margin-bottom: 0;
   }
+
+  @include media-desktop {
+    border-radius: $box-radius-second;
+  }
 }
 
 .card-service__title {

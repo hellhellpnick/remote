@@ -27,6 +27,16 @@
       transition: all 0.2s ease;
     }
   }
+
+  @include media-desktop {
+    border-radius: $box-radius-second;
+
+    &:hover {
+      .card-content__wrapper {
+        border-radius: $box-radius-second;
+      }
+    }
+  }
 }
 
 .card-content__wrapper {
