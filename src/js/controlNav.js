@@ -110,8 +110,6 @@ const fixedPositionMenu = () => {
     nav.classList.add(
       "section-header__nav--fixed",
     );
-    nav.style.clientHeight =
-      nav.childNodes[0].nextElementSibling.clientHeight;
 
     changeItemsMenu(arrSections, window.scrollY);
   } else {
